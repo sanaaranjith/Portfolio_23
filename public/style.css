@@ -1,0 +1,469 @@
+/* * selects all elements in the page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #f9cdc4;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    /* added from here for the contact me section */
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;*/
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    z-index: 500;
+}
+.logo.hover{
+    transform: scale(1,1);
+}
+/* shadow over the text */
+.logo span{
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-color);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        z-index: 400;
+    }
+    
+    .navbar a {
+        color: var(--text-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        margin: 0 2rem;
+        transition: color 0.3s ease;
+        /* Add transition for smooth animation */
+        border-bottom: 3px solid transparent;
+        display: inline-block; /* Ensures proper spacing and alignment */
+        position: relative; /* Required for the relative positioning of the pseudo-element */
+    }
+    
+    .navbar a:hover,
+    .navbar a.active {
+        color: var(--main-color);
+    }
+    
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            padding: 1rem 0;
+            position: static;
+        }
+    
+        .navbar a {
+            margin: 1rem 0;
+        }
+    }
+    
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 5px;
+}
+span{
+    color: var(--main-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}  
+
+.home-img {
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    margin-left: auto;
+}
+
+.home-img img {
+    border-radius: 50%;
+    max-width: 350px; /* or whatever size you prefer */
+    max-height: 350;/* or whatever size you prefer */
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    position: relative;
+    top: 3rem;
+    width: 32vw; /* or another appropriate unit like % */
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.home-content p{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 3.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: var(--text-color);
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+
+/* Education CSS */
+.heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.education{
+    padding: 100px 15px;
+    background: var(--second-bg-color);
+}
+
+.education h2{
+    margin-bottom: 5rem;
+}
+
+.timeline-items{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 
+        0 0 25px var(--main-color),
+        0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-content{
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.timeline-content p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
+
+/* till 14:32 of the video :
+image is entered
+navbar is entered
+the content of my name and para are aligned
+social media icons are brought up
+hire and contact buttons are present */
+
+/* Till 18:36 the web dev, frontend dev, etc etc is set */
+
+.grid-container {
+    display: grid;
+    /*
+    grid-template-columns: auto auto; */
+    background-color: black;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #f9cdc4;
+    border: 1px solid #f9cdc4;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#interests{
+    font-size: 30px;
+}
+
+.skills {
+    padding: 5rem 12%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    color:black;
+}
+
+.grid-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.grid-item:hover {
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+
+/* CSS styling for Contact Me section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem; /* Add some padding for better spacing */
+    text-align: center; /* Center align the text */
+}
+
+.contact h2 {
+    font-size: 4rem;
+    color: #ededed;
+    margin-bottom: 2rem; /* Increase margin for better spacing */
+}
+
+.contact form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* Ensure form fields stack vertically */
+    gap: 1.5rem; /* Add gap between form fields for better spacing */
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem; /* Add gap between input fields */
+}
+
+.input-box .input-field {
+    width: 48.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 1rem; /* Adjust padding for better spacing */
+    background: transparent;
+    border: 2px solid var(--main-color);
+    outline: none;
+    border-radius: 6px;
+    color: #ededed;
+    margin: 1.2rem 0; /* Increase margin for better spacing */
+}
+
+.field .item::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+textarea.field .item {
+    height: auto; /* Ensure textarea grows with content */
+}
+
+button {
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: none;
+    background: var(--main-color);
+    color: #080808;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e8b7af; /* Slightly darker shade for hover effect */
+}
+
+/* css for the labels above boxes */
+.contact .input-field label,
+.contact .textarea-field label {
+    display: block;
+    color: #ededed;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.error-txt {
+    color: #E53417;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 0.5rem;
+    display: none; /* Initially hide error messages */
+}
+
+.text-animation {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#changing-text {
+    border-right: 2px solid black;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
